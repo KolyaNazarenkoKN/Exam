@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Task_Lib
 {
     public class Task
@@ -13,7 +14,7 @@ namespace Task_Lib
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public State state { get; set; }
+        public State State { get; set; }
     }
 
     public enum State
@@ -25,9 +26,11 @@ namespace Task_Lib
     public class Tasks
     {
         List<Task> tasks = new List<Task>();
-        public void AddTask(Task t)
+        public void AddTask()
         {
 
+  
+            
         }
     }
 }

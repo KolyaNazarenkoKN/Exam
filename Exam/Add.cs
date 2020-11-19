@@ -7,28 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Exam
 {
-   
-    public partial class Form1 : Form
+    public partial class Add : Form 
     {
-     
-        
-        public Form1()
+        public Add()
         {
             InitializeComponent();
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
-
+             
         }
-        
-
-    }
-    class Task
-    {
-
     }
 }
