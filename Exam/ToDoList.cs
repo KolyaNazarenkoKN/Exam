@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Task_Lib;
 using System.Xml.Serialization;
 using System.IO;
+using static System.Windows.Forms.ListView;
 
 namespace Exam
 {
@@ -51,22 +52,19 @@ namespace Exam
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //XmlSerializer serializer = new XmlSerializer(typeof(ListViewItemCollection));
+            ListViewItemCollection y= listView1.Items;
 
-            //using (FileStream stream = File.OpenWrite(myXmlFilePath))
-            //{
-            //    serializer.Serialize(stream, listView1.Items);
-            //}
+            XmlSerializer serializer = new XmlSerializer(typeof(ListViewItemCollection));
+
+            using (FileStream stream = File.OpenWrite(@"C:\Users\Kolya\Downloads\Exam.xml"))
+            {
+                serializer.Serialize(stream, listView1.Items);
+            }
         }
 
 
 
-
-        public void SaveToXml(string myXmlFilePath)
-        {
-
-            
-        }
+      
 
         private void button4_Click(object sender, EventArgs e)
         {
