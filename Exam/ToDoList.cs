@@ -34,6 +34,7 @@ namespace Exam
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             Task_Lib.Task task = new Task_Lib.Task();
             int id = task.Id = Convert.ToInt32(textBox1.Text);
             string name = task.Name = textBox2.Text;
@@ -66,6 +67,20 @@ namespace Exam
 
             
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem viewItem in listView1.SelectedItems)
+            {
+
+                listView1.Items.Remove(viewItem);
+            }
+       
+        }
+
+       
+
+
 
 
 
